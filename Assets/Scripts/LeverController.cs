@@ -1,11 +1,19 @@
+using Unity.VisualScripting;
+using UnityEditor.Callbacks;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class LeverController : MonoBehaviour
 {
-    [SerializeField] GameObject laser;
+    InputAction interactAction;
     bool isTrigger = false;
+    [SerializeField] Rigidbody2D boxRb;
+    
+    void Start()
+    {
+        interactAction = InputSystem.actions.FindAction("Interact");
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,9 +33,9 @@ public class LeverController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C) && isTrigger == true)
+        if(interactAction.WasPressedThisFrame() && isTrigger == true)
         {
-            laser.SetActive(false);
+           boxRb.gravityScale = 1;
         }
     }
 }
