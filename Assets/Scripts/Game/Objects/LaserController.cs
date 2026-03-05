@@ -3,6 +3,7 @@ using UnityEngine.Sprites;
 
 public class LaserController : MonoBehaviour
 {
+    
     [SerializeField] Transform laser;
     [SerializeField] LayerMask layer;
     SpriteRenderer sr;
