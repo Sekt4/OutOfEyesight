@@ -14,6 +14,13 @@ public class ExitDoorController : MonoBehaviour
             canExit = true;
         }
     }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            canExit = false;
+        }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
