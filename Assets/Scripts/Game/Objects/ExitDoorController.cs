@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class ExitDoorController : MonoBehaviour
 {
-    private KeyController keyController;
     InputAction interactAction;
     [SerializeField] bool canExit = false;
     void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +30,7 @@ public class ExitDoorController : MonoBehaviour
     {
         if(canExit == true && interactAction.WasPressedThisFrame())
         {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Menu");
         }
     }
 }

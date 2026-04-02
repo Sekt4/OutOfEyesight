@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] GameObject loosePanel;
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Laser"))
         {
+            loosePanel.SetActive(true);
             Destroy(gameObject);
         }
     }
