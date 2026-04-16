@@ -8,11 +8,15 @@ public class PlayerInteractions : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Laser"))
         {
-            loosePanel.SetActive(true);
-            Destroy(gameObject);
+            Death();
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public void Death()
+    {
+        loosePanel.SetActive(true);
+        Destroy(gameObject);
+    }
     void Start()
     {
         
