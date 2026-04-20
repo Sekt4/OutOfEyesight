@@ -7,6 +7,7 @@ public class CameraDetection : MonoBehaviour
     [SerializeField] Color32 warningColor;
     [SerializeField] Color32 dangerColor;
     [SerializeField] PlayerInteractions playerInteractions;
+    [SerializeField] Animator cameraMovement;
     SpriteRenderer sr;
     String state = "Green";
 
@@ -15,6 +16,7 @@ public class CameraDetection : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         sr.color = dangerColor;
+        cameraMovement.speed = 0;
         state = "Danger";
         StartCoroutine("DeathTimer");
     }
@@ -26,6 +28,7 @@ public class CameraDetection : MonoBehaviour
             if(state == "Green")
             {
                 sr.color = warningColor;
+                cameraMovement.speed = 0;
                 StartCoroutine("SetDanger");
                 state = "Warning";
             }
@@ -39,6 +42,7 @@ public class CameraDetection : MonoBehaviour
             if(state == "Warning")
             {
                 sr.color = greenColor;
+                cameraMovement.speed = 1;
                 StopCoroutine("SetDanger");
                 state = "Green";
             }
