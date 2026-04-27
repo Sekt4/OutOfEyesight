@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Animator playerAnimator;
     InputAction moveAction;
     InputAction sprintAction;
     Rigidbody2D rb;
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerAnimator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         moveAction = InputSystem.actions.FindAction("Move");
         sprintAction = InputSystem.actions.FindAction("Sprint");
@@ -44,5 +46,12 @@ public class PlayerMovement : MonoBehaviour
             s.x = Mathf.Abs(s.x);
             transform.localScale = s;
         }
+        SetAnimation();
+    }
+
+    void SetAnimation()
+    {
+        float currentSpeed = rb.linearVelocity.magnitude;
+        playerAnimator.SetFloat("Speed", currentSpeed);
     }
 }

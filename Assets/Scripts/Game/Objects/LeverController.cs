@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class LeverController : MonoBehaviour
 {
+    [SerializeField] Animator chainAnimator;
     InputAction interactAction;
     bool isTrigger = false;
     [SerializeField] Rigidbody2D boxRb;
@@ -35,6 +36,7 @@ public class LeverController : MonoBehaviour
     {
         if(interactAction.WasPressedThisFrame() && isTrigger == true)
         {
+           chainAnimator.SetTrigger("LeverPulled");
            boxRb.gravityScale = 1;
         }
     }
