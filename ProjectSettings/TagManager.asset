@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Laser
   - Floor
   - Key
+  - Obstacle
+  - Laser
   layers:
   - Default
   - TransparentFX

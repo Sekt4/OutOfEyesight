@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f793d6104312a8e47adeb2601b282423
+guid: d3a8db977609f1741b9d67f8fe9b8507
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2812132534432004177
-    second: PlayerSpooper_0
+      213: -6208561279704239265
+    second: BGWall_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,18 +40,18 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerSpooper_0
+      name: BGWall_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 15
-        width: 27
-        height: 31
+        x: 9
+        y: 5
+        width: 46
+        height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa78cd7fb5c49f8d0800000000000000
-      internalID: -2812132534432004177
+      spriteID: f53fbf41962c6d9a0800000000000000
+      internalID: -6208561279704239265
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8b3bc521c4a458b41ab3442013b06572
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PlayerSpooper_0: -2812132534432004177
+      BGWall_0: -6208561279704239265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
