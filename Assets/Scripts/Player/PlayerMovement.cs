@@ -8,8 +8,6 @@ public class PlayerMovement : MonoBehaviour
     InputAction sprintAction;
     Rigidbody2D rb;
     [SerializeField] float moveSpeed = 5;
-    [SerializeField] float walkSpeed = 5;
-    [SerializeField] float sprintSpeed = 8;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,15 +23,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 moveVector = moveAction.ReadValue<Vector2>();
         rb.linearVelocity = moveVector * moveSpeed;
-
-        if(sprintAction.IsPressed() && moveSpeed != sprintSpeed)
-        {
-            moveSpeed = sprintSpeed;
-        }
-        else if(!sprintAction.IsPressed() && moveSpeed == sprintSpeed)
-        {
-            moveSpeed = walkSpeed;
-        }
         if(moveVector.x > 0)
         {
             Vector3 s = transform.localScale;
