@@ -447,6 +447,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2400877323848989583, guid: 0798149339e6a0747b32bced640272d8, type: 3}
+      propertyPath: moveSpeed
+      value: 3.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3005246138736098309, guid: 0798149339e6a0747b32bced640272d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.09
@@ -2652,6 +2656,8 @@ GameObject:
   - component: {fileID: 1109142117}
   - component: {fileID: 1109142116}
   - component: {fileID: 1109142115}
+  - component: {fileID: 1109142119}
+  - component: {fileID: 1109142118}
   m_Layer: 5
   m_Name: LooseScreenPanelBG
   m_TagString: Untagged
@@ -2717,6 +2723,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1109142118
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109142114}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!95 &1109142119
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109142114}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a241973b6db2c44aa08609ca16bd65b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1124508856
 PrefabInstance:
   m_ObjectHideFlags: 0
